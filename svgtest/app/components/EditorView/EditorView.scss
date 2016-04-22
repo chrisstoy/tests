@@ -1,0 +1,12 @@
+/* SASS file for EditorView html */
+.editor-view {
+
+  h1 {
+    color: green;
+
+    &:hover {
+      color: blue;
+    }
+  }
+
+}
