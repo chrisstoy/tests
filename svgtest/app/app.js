@@ -2,15 +2,21 @@
  * Main App module
  */
 
-(function (angular) {
+(function () {
 	'use strict';
 
+// Require all of our requirements
+	var jquery = require('jquery');
+	var angular = require('angular');
+
+
 // Declare app level module which depends on views, and components
-	var module = angular.module('svgTestApp', [
-		'ngRoute'
+	var appModule = angular.module('svgTestApp', [
+		require('angular-route')
 	]);
 
-	module.config(['$routeProvider', function ($routeProvider) {
+
+	appModule.config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.when('/', {
 			template: '<editor-view></editor-view>'
 		});
@@ -20,5 +26,4 @@
 		});
 	}]);
 
-
-})(window.angular);
+})();
